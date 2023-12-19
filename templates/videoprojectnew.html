@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARKING LOT DETECTION USING YOLOv5</title>
+
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <script>
+    function toggleSampleImage() {
+      var sampleImage = document.getElementById('sample-image');
+      sampleImage.style.display = (sampleImage.style.display === 'none' || sampleImage.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <header class="feature-box top">
+    <h1><strong>PARKING LOT DETECTION USING YOLOv5</strong></h1>
+  </header>
+
+
+      <!-- Link to Image Detection -->
+      <button onclick="window.location.href='{{ url_for('video1') }}'">Deteksi Gambar</button>
+      
+      <!-- Link to Video Detection -->
+      <button onclick="window.location.href='{{ url_for('video2') }}'">Deteksi Video</button>
+    </div>
+  </section>
+
+  <button onclick="window.location.href='{{ url_for('index') }}'">Kembali ke Halaman Awal</button>
+
+</body>
+</html>

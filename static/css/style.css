@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 300;
+    padding: 100;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #23a699; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .feature-box {
+    margin-bottom: 20px;
+  }
+  
+  .col-sm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  .col-sm div {
+    width: 48%; /* Adjust as needed */
+    margin-bottom: 20px;
+  }
+  
+  .new {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-file-input {
+    width: 12%;
+    margin-right: 100px;
+  }
+  
+  .btnCustom {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .col-sm > div {
+      width: 100%;
+    }
+  }
+
+  /* Tambahkan gaya untuk kotak sampel gambar */
+.sample-image-box {
+    width: 50%; /* Sesuaikan lebar kotak sesuai kebutuhan */
+    float: left;
+    margin-right: 20px; /* Jarak antara kotak gambar dan formulir */
+  }
+  
+
+  button {
+    background-color: #27849b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+
+  button:hover {
+    background-color: #555;
+  }

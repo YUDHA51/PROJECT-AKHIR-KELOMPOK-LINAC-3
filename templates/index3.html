@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARKING LOT DETECTION</title>
+
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <script>
+    function toggleSampleImage() {
+      var sampleImage = document.getElementById('sample-image');
+      sampleImage.style.display = (sampleImage.style.display === 'none' || sampleImage.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <header class="feature-box top">
+    <h1><strong>PARKING LOT DETECTION USING YOLOv5</strong></h1>
+  </header>
+
+  <section>
+    <div class="new">
+      <!-- Tombol untuk menampilkan/menyembunyikan sampel gambar -->
+      <button onclick="toggleSampleImage()">CONTOH SAMPEL FOTO/VIDEO</button>
+
+      <!-- Sampel Gambar (mula-mula tersembunyi) -->
+      <div id="sample-image" style="display: none;">
+        <img src="{{ url_for('static', filename='images/DjpiJaGVAAALnnR.jpg') }}" alt="Sample Image" style="max-width: 100%; border-radius: 15px;">
+      </div>
+
+      <div>
+        <img src="{{ url_for('video') }}" >
+      </div>
+
+      <!-- Form Upload -->
+      <form method='POST' enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        {{form.file(class_="custom-file-input")}}
+        <div>
+          <button type="submit" name="favorite" value="x" class="btnCustom">
+            Submit
+          </button>
+        </div>
+      </form>
+
+
+    </div>
+  </section>
+
+  <button onclick="window.location.href='{{ url_for('index') }}'">Kembali ke Halaman Awal</button>
+
+</body>
+</html>
